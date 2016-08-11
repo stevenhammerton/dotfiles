@@ -1,0 +1,65 @@
+# Aliases
+alias ls='ls -G'
+
+alias s=ssh
+alias w='cd workspace'
+
+alias g='git'
+alias gitlog='git log --oneline --graph --decorate'
+alias gitloga='git log --oneline --graph --decorate --all'
+
+# Path Entries
+export PATH="/usr/local/bin:$PATH"
+export PATH=$PATH:/Users/steven/bin
+
+# Prompt Colours
+Reset="\[\033[0m\]"           # Text Reset
+Black="\[\033[0;90m\]"        # Intence Black
+Red="\[\033[0;91m\]"          # Intense Red
+Green="\[\033[0;32m\]"        # Green
+Yellow="\[\033[0;33m\]"       # Yellow
+Blue="\[\033[0;34m\]"         # Blue
+White="\[\033[0;37m\]"        # White
+
+# Prompt Variables
+User="\u"
+Host="\h"
+Time="\T"
+Path="\w"
+
+# Prompt
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+export PS1=$Black$User'@'$Host$Reset'$(git branch &>/dev/null;\
+if [ $? -eq 0 ]; then \
+  # Prompt when in Git repo
+  if [ `git status | grep "nothing to commit" | wc -l` -eq 1 ]; then \
+    if [ `git cherry | wc -l` -eq 0 ]; then \
+      # Clean repository
+      echo -n "'$Green'"$(__git_ps1 " (%s)"); \
+    else \
+      # Commits not pushed
+      echo -n "'$Blue'"$(__git_ps1 " [%s]"); \
+    fi \
+  else \
+    # Uncommitted changes
+    echo -n "'$Red'"$(__git_ps1 " {%s}"); \
+  fi
+  echo " '$Yellow$Path$Reset' \$ "; \
+else \
+  # Prompt when not in Git repo
+  echo " '$Yellow$Path$Reset' \$ "; \
+fi)'
+
+# Git
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+
+# Java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home
+
+#BespokeDeployment
+export BESPOKE_DEPLOYMENT_HOME=/Users/steven/opt/bespoke-deployment
+export PATH=$PATH:$BESPOKE_DEPLOYMENT_HOME
+complete -C complete_bspkctl bspkctl
+
+export PATH=$PATH:/Users/steven/opt/gwctl
+complete -C complete_gwctl gwctl
