@@ -78,3 +78,6 @@ alias tailstrike="ssh tailstrike"
 # MVN
 alias mvni='mvn install'
 alias mvnci='mvn clean install'
+
+#i2cssh
+alias mssh='i2cssh'
