@@ -15,4 +15,7 @@ link_if_not_exists("~/dotfiles/bash/profile",    "~/.profile")
 link_if_not_exists("~/dotfiles/bash/bashrc",     "~/.bashrc")
 
 # Vim
-link_if_not_exists("~/dotfiles/vim/vimrc",     "~/.vimrc")
+link_if_not_exists("~/dotfiles/vim/vimrc",       "~/.vimrc")
+
+# Git
+link_if_not_exists("~/dotfiles/git/gitconfig",   "~/.gitconfig")
