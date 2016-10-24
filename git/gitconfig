@@ -1,4 +1,9 @@
-# This is Git's per-user configuration file.
 [user]
     name = Steven Hammerton
-    email = steven.hammerton@openmarket.com
+    email = (none)
+
+[push]
+    default = current
+
+[pull]
+    rebase = true
