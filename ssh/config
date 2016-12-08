@@ -1,0 +1,11 @@
+Host * !*.* *.openmarket.com *.mxtelecom.com
+  ForwardAgent yes
+  IdentityFile ~/.ssh/om-steven.key
+
+Host *.h7n.uk
+  ForwardAgent yes
+  IdentityFile ~/.ssh/id_rsa
+
+Host *
+  ForwardAgent no
+  IdentityFile ~/.ssh/id_rsa
