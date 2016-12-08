@@ -54,15 +54,15 @@ fi)'
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 
 # Java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk8/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home
 
 alias java6="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk6/Contents/Home"
 alias java7="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk7/Contents/Home"
-alias java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk8/Contents/Home"
+alias java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home"
 alias java?="echo $JAVA_HOME"
 
 # IRC
-alias irc="ssh -t h7n 'tmux attach-session -d'"
+alias irc="ssh -t mercury.h7n.uk 'tmux attach-session -d'"
 
 # SSH
 alias tailstrike="ssh tailstrike"
