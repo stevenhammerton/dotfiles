@@ -1,6 +1,7 @@
 Host * !*.* *.openmarket.com *.mxtelecom.com
   ForwardAgent yes
   IdentityFile ~/.ssh/om-steven.key
+  StrictHostKeyChecking no
 
 Host *.h7n.uk
   ForwardAgent yes
