@@ -61,9 +61,6 @@ alias java7="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk7/Contents/Ho
 alias java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home"
 alias java?="echo $JAVA_HOME"
 
-# IRC
-alias irc="ssh -t mercury.h7n.uk 'tmux attach-session -d'"
-
 # SSH
 alias tailstrike="ssh tailstrike"
 
@@ -74,6 +71,11 @@ alias mvnci='mvn clean install'
 #i2cssh
 alias mssh='i2cssh'
 
+# AWS Console
+export PATH=$PATH:~/Library/Python/3.6/bin
+complete -C '~/Library/Python/3.6/bin/aws_completer' aws
+
 if [ -e ~/.bashrc-om ]; then
   source ~/.bashrc-om
 fi
+
