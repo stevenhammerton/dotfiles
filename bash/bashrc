@@ -1,6 +1,8 @@
 # Aliases
 alias ls='ls -G'
 
+alias sk='ssh-add ~/.ssh/om-steven.key ~/.ssh/id_rsa'
+
 alias s=ssh
 alias w='cd workspace'
 
