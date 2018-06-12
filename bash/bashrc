@@ -56,18 +56,6 @@ source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bas
 # Java
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home
 
-alias java6="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk6/Contents/Home"
-alias java7="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk7/Contents/Home"
-alias java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home"
-alias java?="echo $JAVA_HOME"
-
-# SSH
-alias tailstrike="ssh tailstrike"
-
-# MVN
-alias mvni='mvn install'
-alias mvnci='mvn clean install'
-
 #i2cssh
 alias mssh='i2cssh'
 
